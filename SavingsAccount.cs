@@ -2,14 +2,14 @@ using System;
 
  class SavingsAccount : BankAccount
     {
-        private double sbalance;
+        private double balance;
 
-        public double SBalance
+        public double Balance
         //Balance cannot be under 2500.0 
         {
             get
             {
-                return sbalance;
+                return balance;
             }
 
             set
@@ -17,7 +17,7 @@ using System;
                 if (value < 2500.0)
                      Console.WriteLine("Innsuficient Funds for Savings Account");
                 else
-                    sbalance = value;
+                    balance = value;
             }
         }
 
@@ -35,22 +35,28 @@ using System;
         {
           Console.WriteLine("Name: " + Name);
           Console.WriteLine("Account Number: " + AccountNumber);
-          Console.WriteLine("Total Balance: " + "$" + SBalance);
+          Console.WriteLine("Total Balance: " + "$" + Balance);
         }
 
         public override void CalculateInterest()
         {
           double x = 0.05;
-          double balanceI_S = (SBalance * x) + SBalance;
+          double balanceI_S = (Balance * x) + Balance;
           Console.WriteLine("Added Interest and Updated Balance: $" + balanceI_S);
         }
 
         public override void Withdraw(double amount)
         {
-           double newbalanceS = SBalance - amount;
-            if (SBalance >= 2500.00)
-              Console.WriteLine("New Balance is: $" + newbalanceS);
+           double newbalance = Balance - amount;
+            if (Balance >= 2500.00)
+              Console.WriteLine("New Balance is: $" + newbalance);
             else
             Console.WriteLine("Innsuficient Funds. Cannot Withdraw Desired Amount.");
         }
+        public void Deposit(double amount)
+{
+  double newtotal = (Balance + amount);
+  Console.WriteLine ("Deposit Successful.");
+  Console.WriteLine ("New Balance is: $" + newtotal);
+}
     }

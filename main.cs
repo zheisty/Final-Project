@@ -20,10 +20,10 @@ class MainClass
    s1.Name = "Zachary Heisterkamp";
    s1.AccountNumber = "123456";
    s1.DateCreated = Convert.ToDateTime("07/29/2005");
-   
-   s1.SBalance = 250;  
+   s1.Balance = 2500;  
    s1.DisplayAccountInfo();
    s1.Withdraw(500);
+   s1.Deposit(111);
    s1.CalculateInterest();
    
 
@@ -34,9 +34,10 @@ class MainClass
    c1.Name = "Zachary Heisterkamp";
    c1.AccountNumber = "123456";
    c1.DateCreated = Convert.ToDateTime("07/29/2005");
-   c1.CBalance = 500;
+   c1.Balance = 500;
    c1.DisplayAccountInfo();
    c1.Withdraw(10);
+   c1.Deposit(111);
    c1.CalculateInterest();
   }
 }
