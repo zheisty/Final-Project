@@ -38,14 +38,14 @@ using System;
           Console.WriteLine("Total Balance: " + "$" + SBalance);
         }
 
-        public void CalculateInterest()
+        public override void CalculateInterest()
         {
           double x = 0.05;
           double balanceI_S = (SBalance * x) + SBalance;
           Console.WriteLine("Added Interest and Updated Balance: $" + balanceI_S);
         }
 
-        public void Withdraw(double amount)
+        public override void Withdraw(double amount)
         {
            double newbalanceS = SBalance - amount;
             if (SBalance >= 2500.00)

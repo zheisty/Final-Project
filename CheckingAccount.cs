@@ -34,14 +34,14 @@ class CheckingAccount : BankAccount
           Console.WriteLine("Account Number: " + AccountNumber);
           Console.WriteLine("Total Balance: " + "$" + CBalance);
         }
-    public void CalculateInterest()
+    public override void CalculateInterest()
         {
           double x = 0.0075;
           double balanceI_C = (CBalance * x) + CBalance;
           Console.WriteLine("Added Interest and Updated Balance: $" + balanceI_C);
         }
     
-     public void Withdraw(double amount)
+     public override void Withdraw(double amount)
         {
            double newbalanceC = CBalance - amount;
             if (CBalance >= 500.00)

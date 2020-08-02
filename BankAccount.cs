@@ -82,7 +82,7 @@ public void Deposit(double amount)
   Console.WriteLine ("Deposit Successful.");
   Console.WriteLine ("New Balance is: " + newtotal);
 }
-public virtual void Withdrawl(double amount)
+public virtual void Withdraw(double amount)
 {
   double newbalance = Balance - amount;
 if (Balance > amount)
@@ -90,7 +90,7 @@ if (Balance > amount)
 else
   Console.WriteLine("Innsuficient Funds. Cannot Withdrawl Desired Amount.");
 }
-public void Interest()
+public virtual void CalculateInterest()
 {
   double x = 0.05;
   double balanceI = (Balance * x) + Balance;

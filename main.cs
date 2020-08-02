@@ -11,7 +11,7 @@ class MainClass
    b1.DateCreated = Convert.ToDateTime("07/29/2005");
    b1.Balance = 10000;
    b1.DisplayAccountInfo();
-   b1.Interest();
+   
 
   Console.WriteLine("");
 
@@ -21,8 +21,7 @@ class MainClass
    s1.AccountNumber = "123456";
    s1.DateCreated = Convert.ToDateTime("07/29/2005");
    
- 
-   s1.SBalance = 2500;  
+   s1.SBalance = 250;  
    s1.DisplayAccountInfo();
    s1.Withdraw(500);
    s1.CalculateInterest();
@@ -37,7 +36,7 @@ class MainClass
    c1.DateCreated = Convert.ToDateTime("07/29/2005");
    c1.CBalance = 500;
    c1.DisplayAccountInfo();
-   c1.Withdraw(500);
+   c1.Withdraw(10);
    c1.CalculateInterest();
   }
 }
